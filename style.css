@@ -101,40 +101,45 @@ button, input, select, textarea {
 /**
  * Section
  */
-.request, .intro {
+.feature, .request, .intro {
   padding: 3rem 0;
 }
 
-.request__heading {
+.feature__heading, .request__heading {
   margin: 3rem 0;
   text-align: center;
 }
 
-.request__headingInner {
+.feature__headingInner, .request__headingInner {
   position: relative;
   display: inline-block;
   padding-bottom: 1rem;
   color: #333333;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.17rem;
 }
-.request__headingInner::before, .request__headingInner::after {
+@media (min-width: 1260px) {
+  .feature__headingInner, .request__headingInner {
+    font-size: 1.5rem;
+  }
+}
+.feature__headingInner::before, .request__headingInner::before, .feature__headingInner::after, .request__headingInner::after {
   content: "";
   position: absolute;
   width: 50%;
   height: 6px;
   bottom: 0;
 }
-.request__headingInner::before {
+.feature__headingInner::before, .request__headingInner::before {
   left: 0;
   background-color: #ed6a1f;
 }
-.request__headingInner::after {
+.feature__headingInner::after, .request__headingInner::after {
   right: 0;
   background-color: #7ebfd8;
 }
 
-.banner, .header__content {
+.feature__inner, .banner, .header__content {
   width: min(100%, 63rem);
   margin: auto;
   padding: 0 clamp(0.75rem, 2.5%, 1.5rem);
@@ -430,4 +435,110 @@ button, input, select, textarea {
   color: #ffffff;
   font-weight: 500;
   font-size: 0.67em;
+}
+
+/**
+ * Feature
+ */
+.feature__inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.feature__content {
+  position: relative;
+  flex: 0 0 18.75rem;
+  margin: 1.5rem 0;
+  padding-top: 1.5rem;
+  border-radius: 12px;
+  background: url("./assets/background_mb.jpg") no-repeat 50% 50%;
+  line-height: 1.6;
+}
+.feature__content:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  right: 0;
+  width: 18.75rem;
+  height: 3rem;
+  background: url("./assets/num01.svg") no-repeat 50% 50%/contain scroll;
+}
+.feature__content:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  right: 0;
+  width: 18.75rem;
+  height: 3rem;
+  background: url("./assets/num02.svg") no-repeat 50% 50%/contain scroll;
+}
+.feature__content:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  right: 0;
+  width: 18.75rem;
+  height: 3rem;
+  background: url("./assets/num03.svg") no-repeat 50% 50%/contain scroll;
+}
+.feature__subheading {
+  height: 4rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2;
+}
+.feature__subheading.--num_2 {
+  line-height: 1;
+}
+.feature__image {
+  width: min(100%, 18rem);
+  margin: auto;
+}
+.feature__image.--num_2 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.feature__image.--num_3 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+.feature__lead {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.feature__lead > span {
+  display: block;
+}
+.feature__strong {
+  position: relative;
+  font-size: 1em;
+}
+.feature__strong::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.2em;
+  z-index: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #ee7a7a;
+}
+.feature__strong > span {
+  position: relative;
+  z-index: 10;
+}
+.feature__text {
+  padding: 0 1.5rem 1.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: justify;
 }

@@ -1,0 +1,99 @@
+/**
+ * Feature
+ */
+
+.feature {
+  @extend %__section;
+
+  &__heading {
+    @extend %__heading;
+  }
+
+  &__headingInner {
+    @extend %__headingInner;
+  }
+
+  &__inner {
+    @extend %__inner;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  &__content {
+    position: relative;
+    flex: 0 0 18.75rem;
+    margin: 1.5rem 0;
+    padding-top: 1.5rem;
+    border-radius: 12px;
+    background: url("./assets/background_mb.jpg") no-repeat 50% 50%;
+    line-height: 1.6;
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        &::after {
+          content: "";
+          position: absolute;
+          top: -1.5rem;
+          left: 0;
+          right: 0;
+          width: 18.75rem;
+          height: 3rem;
+          background: url("./assets/num0#{$i}.svg") no-repeat 50% 50% / contain scroll;
+        }
+      }
+    }
+  }
+
+  &__subheading {
+    height: 4rem;
+    color: $white;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2;
+
+    &.--num_2 {
+      line-height: 1;
+    }
+  }
+
+  &__image {
+    width: min(100%, 18rem);
+    margin: auto;
+
+    &.--num_2 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    &.--num_3 {
+      padding-left: 2.25rem;
+      padding-right: 2.25rem;
+    }
+  }
+
+  &__lead {
+    color: $white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+
+    & > span {
+      display: block;
+    }
+  }
+
+  &__strong {
+    @include strong();
+  }
+
+  &__text {
+    padding: 0 1.5rem 1.5rem;
+    color: $white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+}

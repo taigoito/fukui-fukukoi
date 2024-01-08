@@ -1,0 +1,72 @@
+/**
+ * Banner
+ */
+
+.banner {
+  @extend %__inner;
+  text-align: center;
+
+  &__lead {
+    color: $black;
+    font-weight: 700;
+    font-size: 0.75rem;
+
+    &::before {
+      content: "＼";
+      font-size: 1.5em;
+      vertical-align: middle;
+    }
+
+    &::after {
+      content: "／";
+      font-size: 1.5em;
+      vertical-align: middle;
+    }
+
+    @media (min-width: $breakpointSm) {
+      font-size: 0.9em;
+    }
+  }
+
+  &__main {
+    width: min(100%, 30rem);
+    margin: auto;
+    padding: 0.75rem;
+    border-radius: 6px;
+    background-color: $blue;
+    line-height: 1.44;
+  }
+
+  &__title {
+    margin: 0;
+    color: $white;
+    font-weight: 700;
+    font-size: 1rem;
+
+    @media (min-width: $breakpointSm) {
+      font-size: 1.5em;
+    }
+  }
+
+  &__campaign {
+    margin: 0;
+    color: $yellow;
+    font-weight: 700;
+    font-size: 1rem;
+
+    @media (min-width: $breakpointSm) {
+      font-size: 1.1em;
+    }
+  }
+
+  &__note {
+    margin: 0;
+    color: $white;
+    font-weight: 700;
+    font-size: 0.7rem;
+
+    & > span {
+      font-size: 0.8rem;
+    }
+  }
+}

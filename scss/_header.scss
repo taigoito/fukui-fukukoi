@@ -1,0 +1,75 @@
+/**
+ * Header
+ */
+
+.header {
+  position: relative;
+  width: 100%;
+  height: calc(220vw + 6rem);
+  margin-bottom: -4.5rem;
+
+  @media (min-width: $breakpointSm) {
+    height: calc(60vw + 4.5rem);
+    margin-bottom: -3rem;
+  }
+
+  &__content {
+    @extend %__inner;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    height: 4.5rem;
+
+    @media (min-width: $breakpointSm) {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    width: 3rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  &__mainVisual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    aspect-ratio: 5 / 11;
+    background-image: url("./assets/main_mb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: $breakpointSm) {
+      aspect-ratio: 5 / 3;
+      background-image: url("./assets/main.jpg");
+    }
+  }
+
+  &__bubble {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 15rem;
+  }
+
+  &__bubbleInner {
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    width: 7.5rem;
+    font-size: 0.85rem;
+  }
+}

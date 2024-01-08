@@ -101,8 +101,37 @@ button, input, select, textarea {
 /**
  * Section
  */
-.intro {
+.request, .intro {
   padding: 3rem 0;
+}
+
+.request__heading {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.request__headingInner {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+  color: #333333;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.request__headingInner::before, .request__headingInner::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 6px;
+  bottom: 0;
+}
+.request__headingInner::before {
+  left: 0;
+  background-color: #ed6a1f;
+}
+.request__headingInner::after {
+  right: 0;
+  background-color: #7ebfd8;
 }
 
 .banner, .header__content {
@@ -308,4 +337,97 @@ button, input, select, textarea {
 }
 .banner__note > span {
   font-size: 0.8rem;
+}
+
+/**
+ * Request
+ */
+.request {
+  background-image: url("./assets/background_mb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 630px) {
+  .request {
+    background-image: url("./assets/background.jpg");
+  }
+}
+.request__inner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 0 clamp(0.75rem, 2.5%, 1.5rem);
+}
+@media (min-width: 630px) {
+  .request__inner:nth-of-type(even) .request__image {
+    order: 1;
+  }
+  .request__inner:nth-of-type(even) .request__content {
+    order: 0;
+    padding-left: 10%;
+  }
+}
+@media (min-width: 630px) {
+  .request__image {
+    flex: 0 0 41.67%;
+  }
+}
+.request__image.--num_2, .request__image.--num_3 {
+  padding-left: max(3rem, 5%);
+  padding-right: max(3rem, 5%);
+}
+.request__image > img {
+  width: 100%;
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.request__image.--num_1 > img {
+  aspect-ratio: 1.6;
+}
+.request__content {
+  margin-bottom: 3rem;
+  padding-left: 3.33%;
+  line-height: 1.8;
+  font-size: 1.17rem;
+}
+@media (min-width: 630px) {
+  .request__content {
+    flex: 0 0 58.33%;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1260px) {
+  .request__content {
+    font-size: 2rem;
+  }
+}
+.request__contentLead {
+  margin: 1em 0;
+  color: #ffffff;
+}
+.request__strong {
+  position: relative;
+  font-size: 1.33em;
+}
+.request__strong::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.2em;
+  z-index: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #ee7a7a;
+}
+.request__strong > span {
+  position: relative;
+  z-index: 10;
+}
+.request__contentText {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.67em;
 }

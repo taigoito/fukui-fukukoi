@@ -1,0 +1,114 @@
+/**
+ * Request
+ */
+
+.request {
+  @extend %__section;
+  background-image: url("./assets/background_mb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $breakpointSm) {
+    background-image: url("./assets/background.jpg");
+  }
+
+  &__heading {
+    @extend %__heading;
+  }
+
+  &__headingInner {
+    @extend %__headingInner;
+  }
+
+  &__inner {
+    //@extend %__inner;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0 clamp(0.75rem, 2.5%, 1.5rem);
+
+    @media (min-width: $breakpointSm) {
+      &:nth-of-type(even) {
+        .request__image {
+          order: 1;
+        }
+
+        .request__content {
+          order: 0;
+          padding-left: 10%;
+        }
+      }
+    }
+  }
+
+  &__image {
+    @media (min-width: $breakpointSm) {
+      flex: 0 0 41.67%;
+    }
+
+    &.--num_2, &.--num_3 {
+      padding-left: max(3rem, 5%);
+      padding-right: max(3rem, 5%);
+    }
+
+    & > img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+
+    &.--num_1 > img {
+      aspect-ratio: 1.6;
+    }
+  }
+
+  &__content {
+    margin-bottom: 3rem;
+    padding-left: 3.33%;
+    line-height: 1.8;
+    font-size: 1.17rem;
+
+    @media (min-width: $breakpointSm) {
+      flex: 0 0 58.33%;
+      font-size: 1rem;
+    }
+
+    @media (min-width: $breakpointLg) {
+      font-size: 2rem;
+    }
+  }
+
+  &__contentLead {
+    margin: 1em 0;
+    color: $white;
+  }
+
+  &__strong {
+    position: relative;
+    font-size: 1.33em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0.2em;
+      z-index: 0;
+      width: 100%;
+      height: 0.1em;
+      background-color: $pink;
+    }
+
+    & > span {
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  &__contentText {
+    color: $white;
+    font-weight: 500;
+    font-size: 0.67em;
+  }
+}

@@ -60,4 +60,15 @@
       }
     }
   }
+
+  &__stepCaption {
+    position: absolute;
+    top: 2.4rem;
+    left: 0;
+    width: 100%;
+    color: $red;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-align: center;
+  }
 }

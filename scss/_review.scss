@@ -1,0 +1,81 @@
+/**
+ * Review
+ */
+
+.review {
+  @extend %__section;
+
+  &__heading {
+    @extend %__heading;
+  }
+
+  &__headingInner {
+    @extend %__headingInner;
+  }
+
+  &__inner {
+    @extend %__inner;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  &__person {
+    position: relative;
+    flex: 0 0 18.75rem;
+    margin: 1.5rem 0;
+    padding: 2.25rem;
+    border: 1px solid $pink;
+    color: $pink;
+
+    &:nth-of-type(even) {
+      border-color: $blue;
+      color: $blue;
+    }
+
+    @for $i from 1 through 6 {
+      &:nth-of-type(#{$i}) {
+        &::after {
+          content: "";
+          position: absolute;
+          top: -0.9rem;
+          left: 0;
+          right: 0;
+          width: 9rem;
+          height: 1.8rem;
+          margin: auto;
+          background: url("./assets/case0#{$i}.svg") no-repeat 50% 50% / contain scroll, #ffffff;
+        }
+      }
+    }
+  }
+
+  &__personImage {
+    width: 10.5rem;
+    margin: auto;
+    padding: 0.75rem 1.5rem 1.5rem;
+  }
+
+  &__personDesc {
+    width: 12rem;
+    height: 1.8rem;
+    margin: auto;
+    border: 1px solid $pink;
+    border-radius: 0.9rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.6rem;
+
+    @at-root .review__person:nth-of-type(even) & {
+      border-color: $blue;
+    }
+  }
+
+  &__personVoice {
+    font-weight: 400;
+    font-size: 0.75rem;
+    text-align: justify;
+  }
+}

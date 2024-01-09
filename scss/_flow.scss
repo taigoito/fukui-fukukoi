@@ -1,0 +1,63 @@
+/**
+ * Flow
+ */
+
+.flow {
+  @extend %__section;
+
+  &__heading {
+    @extend %__heading;
+  }
+
+  &__headingInner {
+    @extend %__headingInner;
+  }
+
+  &__inner {
+    height: 50vw;
+    padding: 0 clamp(0.75rem, 2.5%, 1.5rem);
+    background: url("./assets/flowBg.jpg") no-repeat 50% 50% / cover scroll;
+
+    @media (min-width: $breakpointLg) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+
+  &__step {
+    position: relative;
+    width: 18rem;
+    margin: 1.5rem auto;
+
+    @media (min-width: $breakpointLg) {
+      margin: 1.5rem 0;
+    }
+
+    &:nth-of-type(1), &:nth-of-type(2) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 97.5%;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        width: 2.25rem;
+        height: 1.5rem;
+        margin: auto;
+        background: url("./assets/arrow.svg") no-repeat 50% 50% / contain scroll;
+        transform: rotate(90deg);
+
+        @media (min-width: $breakpointLg) {
+          top: 0;
+          left: 97.5%;
+          right: auto;
+          bottom: 0;
+          transform: none;
+        }
+      }
+    }
+  }
+}

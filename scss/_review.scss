@@ -17,14 +17,14 @@
     @extend %__inner;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: stretch;
   }
 
   &__person {
     position: relative;
-    flex: 0 0 18.75rem;
-    margin: 1.5rem 0;
+    flex: 0 0 18rem;
+    margin: 0.75rem;
     padding: 2.25rem;
     border: 1px solid $pink;
     color: $pink;

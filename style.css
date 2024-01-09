@@ -440,7 +440,7 @@ button, input, select, textarea {
 /**
  * Feature
  */
-.feature__inner {
+.feature__inner.--flex {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -541,4 +541,43 @@ button, input, select, textarea {
   font-weight: 700;
   font-size: 0.9rem;
   text-align: justify;
+}
+.feature__aside {
+  position: relative;
+  margin: 1.5rem 0;
+  border-top: 1px solid #ee7a7a;
+  border-bottom: 1px solid #ee7a7a;
+}
+.feature__asideHeading {
+  width: 18rem;
+  margin: 1.5rem auto 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+@media (min-width: 630px) {
+  .feature__asideHeading {
+    width: 27rem;
+  }
+}
+@media (min-width: 1260px) {
+  .feature__asideHeading {
+    position: absolute;
+    top: -0.9rem;
+    left: 0;
+    right: 0;
+    width: 42rem;
+    margin: auto;
+    background-color: #ffffff;
+  }
+}
+.feature__asideContent {
+  padding: 0.9rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.feature__bannerBg {
+  display: flex;
+  align-items: center;
+  height: max(18rem, 30vw);
+  background: url("./assets/bannerBg.jpg") no-repeat 0 0/cover scroll;
 }

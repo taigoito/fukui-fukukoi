@@ -15,10 +15,13 @@
 
   &__inner {
     @extend %__inner;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: stretch;
+
+    &.--flex {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: stretch;
+    }
   }
 
   &__content {
@@ -95,5 +98,46 @@
     font-weight: 700;
     font-size: 0.9rem;
     text-align: justify;
+  }
+
+  &__aside {
+    position: relative;
+    margin: 1.5rem 0;
+    border-top: 1px solid $pink;
+    border-bottom: 1px solid $pink;
+  }
+
+  &__asideHeading {
+    width: 18rem;
+    margin: 1.5rem auto 0;
+    font-size: 1.2rem;
+    text-align: center;
+
+    @media (min-width: $breakpointSm) {
+      width: 27rem;
+    }
+
+    @media (min-width: $breakpointLg) {
+      position: absolute;
+      top: -0.9rem;
+      left: 0;
+      right: 0;
+      width: 42rem;
+      margin: auto;
+      background-color: $white;
+    }
+  }
+
+  &__asideContent {
+    padding: 0.9rem 0;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  &__bannerBg {
+    display: flex;
+    align-items: center;
+    height: max(18rem, 30vw);
+    background: url("./assets/bannerBg.jpg") no-repeat 0 0 / cover scroll;
   }
 }

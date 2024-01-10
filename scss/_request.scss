@@ -22,14 +22,14 @@
   }
 
   &::before {
-    top: 0;
+    top: -1px;
     left: 0;
     transform: rotate(180deg);
   }
 
   &::after {
     right: 0;
-    bottom: 0;
+    bottom: -1px;
   }
 
   &__heading {
@@ -68,7 +68,12 @@
       flex: 0 0 41.67%;
     }
 
-    &.--num_2, &.--num_3 {
+    &.--num_2 {
+      padding-left: max(4.5rem, 7.5%);
+      padding-right: max(4.5rem, 7.5%);
+    }
+
+    &.--num_3 {
       padding-left: max(3rem, 5%);
       padding-right: max(3rem, 5%);
     }

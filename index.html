@@ -12,12 +12,9 @@
   </head>
   <body>
     <div id="preloader" class="preloader">
-      <div class="preloader__content">
-        <figure class="preloader__image">
-          <img src="./assets/logo_fukukoi.svg"></img>
+      <figure class="preloader__image">
+          <img src="./assets/preloader.svg"></img>
         </figure>
-        <div class="preloader__subtitle">AIマッチングシステム</div>
-        <h1 class="preloader__title">ふく恋</h1>
         <figure class="preloader__award">
           <img src="./assets/award.png">
         </figure>
@@ -443,6 +440,14 @@
           item.classList.toggle('--active');
         })
       });
+
+      const preloader = document.getElementById('preloader');
+      window.onload = () => {
+        preloader.classList.add('--terminate');
+        setTimeout(() => {
+          preloader.remove();
+        }, 1000)
+      }
     </script>
   </body>
 </html>

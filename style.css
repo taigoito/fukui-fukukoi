@@ -58,7 +58,8 @@ button, input, select, textarea {
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  z-index: 1000;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -67,23 +68,15 @@ button, input, select, textarea {
   color: #ee7a7a;
   text-align: center;
   line-height: 1;
+  opacity: 1;
+  transition: 0.5s opacity ease-in-out;
 }
-.preloader__content {
-  width: 13.5rem;
+.preloader.--terminate {
+  opacity: 0;
 }
 .preloader__image {
-  width: 8.25rem;
+  width: 9rem;
   margin: 0.75rem auto;
-}
-.preloader__subtitle {
-  margin: 0.75rem 0;
-  font-weight: 500;
-  font-size: 1rem;
-}
-.preloader__title {
-  margin: 0.75rem 0;
-  font-weight: 700;
-  font-size: 4rem;
 }
 .preloader__award {
   position: absolute;

@@ -6,8 +6,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
-  //display: flex;
+  z-index: 1000;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -16,26 +16,16 @@
   color: $bodyColor;
   text-align: center;
   line-height: 1;
+  opacity: 1;
+  transition: 0.5s opacity ease-in-out;
 
-  &__content {
-    width: 13.5rem;
+  &.--terminate {
+    opacity: 0;
   }
 
   &__image {
-    width: 8.25rem;
+    width: 9rem;
     margin: 0.75rem auto;
-  }
-
-  &__subtitle {
-    margin: 0.75rem 0;
-    font-weight: 500;
-    font-size: 1rem;
-  }
-
-  &__title {
-    margin: 0.75rem 0;
-    font-weight: 700;
-    font-size: 4rem;
   }
 
   &__award {

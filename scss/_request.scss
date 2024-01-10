@@ -4,12 +4,32 @@
 
 .request {
   @extend %__section;
-  background-image: url("./assets/background_mb.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  background: url("./assets/bubbles.png") no-repeat 0 0 / cover scroll, linear-gradient(135deg, rgba(244, 179, 177, 1), rgba(193, 191, 223, 1));
+  background-blend-mode: color-dodge;
 
-  @media (min-width: $breakpointSm) {
-    background-image: url("./assets/background.jpg");
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 10;
+    background: url("./assets/wave_mb.svg") no-repeat 0 0 / cover scroll;
+
+    @media (min-width: $breakpointSm) {
+      aspect-ratio: 20;
+      background-image: url("./assets/wave.svg");
+    }
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
   }
 
   &__heading {

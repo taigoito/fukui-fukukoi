@@ -30,11 +30,13 @@
     margin: 1.5rem 0;
     padding-top: 1.5rem;
     border-radius: 12px;
-    background: url("./assets/background_mb.jpg") no-repeat 50% 50%;
+    background: url("./assets/bubbles.png") no-repeat 0 0 / cover scroll, linear-gradient(135deg, rgba(244, 179, 177, 1), rgba(193, 191, 223, 1));
+    background-blend-mode: color-dodge;
     line-height: 1.6;
 
     @for $i from 1 through 3 {
       &:nth-child(#{$i}) {
+        background-position: #{($i - 1) * 50%};
         &::after {
           content: "";
           position: absolute;
@@ -135,9 +137,38 @@
   }
 
   &__bannerBg {
+    position: relative;
     display: flex;
     align-items: center;
-    height: max(18rem, 30vw);
-    background: url("./assets/bannerBg.jpg") no-repeat 50% 50% / cover scroll;
+    padding: 3rem 0 4.5rem;
+    background-color: #f8f8f8;
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      aspect-ratio: 10;
+      background: url("./assets/wave_mb.svg") no-repeat 0 0 / cover scroll;
+
+      @media (min-width: $breakpointSm) {
+        aspect-ratio: 20;
+        background-image: url("./assets/wave.svg");
+      }
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      transform: rotate(180deg);
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+    }
+
+    @media (min-width: $breakpointLg) {
+      padding: 4.5rem 0 6rem;
+    }
   }
 }

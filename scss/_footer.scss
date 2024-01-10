@@ -1,0 +1,46 @@
+/**
+ * Footer
+ */
+
+ .footer {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 0;
+  border-top: 1px solid #cccccc;
+
+  &__content {
+    @extend %__inner;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    height: 4.5rem;
+  }
+
+  &__logo {
+    width: 3rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  &__subtitle {
+    display: none;
+    font-weight: 500;
+    font-size: 1rem;
+
+    @media (min-width: $breakpointSm) {
+      display: block;
+    }
+  }
+
+  &__backToTop {
+    position: absolute;
+    top: -1.2rem;
+    right: 1.2rem;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}

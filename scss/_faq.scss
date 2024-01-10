@@ -1,0 +1,117 @@
+/**
+ * FAQ
+ */
+
+.faq {
+  @extend %__section;
+
+  &__heading {
+    @extend %__heading;
+  }
+
+  &__headingInner {
+    @extend %__headingInner;
+  }
+
+  &__inner {
+    @extend %__inner;
+  }
+
+  &__item {
+    margin-bottom: 1.5rem;
+  }
+
+  &__question, &__answer {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: $black;
+    padding: 0 3rem 0 1.5rem;
+
+    @media (min-width: $breakpointLg) {
+      padding: 0 3rem;
+    }
+  }
+
+  &__question {
+    transition: 0.35s margin-bottom ease-in-out;
+    border: 1px solid $black;
+    border-radius: 1.5rem;
+
+    &::after {
+      content: "+";
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      bottom: 0;
+      width: 1rem;
+      height: 1rem;
+      margin: auto;
+      color: #808080;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1;
+    }
+
+    @at-root .--active & {
+      margin: 0;
+
+      &::after {
+        content: "-";
+      }
+    }
+  }
+
+  &__answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: 0.35s grid-template-rows ease-in-out;
+
+    @at-root .--active & {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &__answerInner {
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__subheading {
+    width: 3rem;
+    padding: 0.9rem 0 0.6rem;
+    font-family: $fontFamilyFAQ;
+
+    @media (min-width: $breakpointLg) {
+      width: 4.5rem;
+    }
+  }
+
+  &__content {
+    width: calc(100% - 3rem);
+
+    @media (min-width: $breakpointLg) {
+      width: calc(100% - 4.5rem);
+    }
+
+    p {
+      margin: 0.75rem 0;
+    }
+  }
+
+  &__bannerBg {
+    @include bannerBg();
+  }
+
+  &__posterWrap {
+    padding: 1.5rem 0;
+  }
+
+  &__poster {
+    width: min(100%, 36rem);
+    margin: 1.5rem auto;
+    padding: 0 1.5rem;
+  }
+}

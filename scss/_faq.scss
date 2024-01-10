@@ -81,8 +81,9 @@
 
   &__subheading {
     width: 3rem;
-    padding: 0.9rem 0 0.6rem;
+    padding: 0.75rem 0;
     font-family: $fontFamilyFAQ;
+    font-size: 1.5rem;
 
     @media (min-width: $breakpointLg) {
       width: 4.5rem;

@@ -137,38 +137,6 @@
   }
 
   &__bannerBg {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 3rem 0 4.5rem;
-    background-color: #f8f8f8;
-
-    &::before, &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      aspect-ratio: 10;
-      background: url("./assets/wave_mb.svg") no-repeat 0 0 / cover scroll;
-
-      @media (min-width: $breakpointSm) {
-        aspect-ratio: 20;
-        background-image: url("./assets/wave.svg");
-      }
-    }
-
-    &::before {
-      top: 0;
-      left: 0;
-      transform: rotate(180deg);
-    }
-
-    &::after {
-      right: 0;
-      bottom: 0;
-    }
-
-    @media (min-width: $breakpointLg) {
-      padding: 4.5rem 0 6rem;
-    }
+    @include bannerBg();
   }
 }

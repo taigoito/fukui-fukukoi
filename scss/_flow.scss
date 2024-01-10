@@ -98,4 +98,60 @@
     font-size: 0.8rem;
     text-align: center;
   }
+
+  &__campaign {
+    @extend %__inner;
+    background: url("./assets/textPickUp_mb.svg") no-repeat 50% 50%;
+    height: 6.75rem;
+    padding: 1.75rem;
+    background-size: auto 4.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+
+    p {
+      width: 15rem;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $breakpointMd) {
+      height: 4.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      padding: 1.25rem;
+      background-image: url("./assets/textPickUp.svg");
+      background-size: auto 3.75rem;
+      font-size: 1.5rem;
+
+      p {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: $breakpointLg) {
+      height: 4.5rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      padding: 1rem;
+      background-size: auto 4.5rem;
+      font-size: 1.75rem;
+    }
+  }
+
+  &__em {
+    display: inline-block;
+    font-style: normal;
+    @include strong(1em, $yellow, 0.25em);
+  }
+
+  &__movie {
+    width: min(100%, 36rem);
+    margin: 1.5rem auto;
+    padding: 0 1.5rem;
+  }
+
+  &__bannerBg {
+    @include bannerBg();
+  }
 }

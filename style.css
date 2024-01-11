@@ -189,7 +189,7 @@ button, input, select, textarea {
 }
 .header__mainVisual {
   position: absolute;
-  top: 0;
+  top: 1.5rem;
   left: 0;
   z-index: -1;
   width: 100%;
@@ -200,6 +200,7 @@ button, input, select, textarea {
 }
 @media (min-width: 630px) {
   .header__mainVisual {
+    top: 0;
     aspect-ratio: 5/3;
     background-image: url("./assets/main.jpg");
   }
@@ -982,9 +983,14 @@ button, input, select, textarea {
   z-index: 10;
 }
 .flow__movie {
-  width: min(100%, 36rem);
+  width: min(100%, 40rem);
   margin: 1.5rem auto;
-  padding: 0 1.5rem;
+  padding: 0 0.75rem;
+}
+.flow__movie iframe {
+  width: min(100%, 40rem);
+  height: auto;
+  aspect-ratio: 16/9;
 }
 .flow__bannerBg {
   position: relative;

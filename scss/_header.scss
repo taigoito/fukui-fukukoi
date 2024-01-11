@@ -50,7 +50,7 @@
 
   &__mainVisual {
     position: absolute;
-    top: 0;
+    top: 1.5rem;
     left: 0;
     z-index: -1;
     width: 100%;
@@ -60,6 +60,7 @@
     background-size: cover;
 
     @media (min-width: $breakpointSm) {
+      top: 0;
       aspect-ratio: 5 / 3;
       background-image: url("./assets/main.jpg");
     }

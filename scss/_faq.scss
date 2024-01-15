@@ -3,7 +3,7 @@
  */
 
 .faq {
-  @extend %__section;
+  padding: 0 0 3rem;
 
   &__heading {
     @extend %__heading;

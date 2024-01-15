@@ -95,7 +95,7 @@ button, input, select, textarea {
 /**
  * Section
  */
-.faq, .flow, .review, .feature, .request, .intro {
+.flow, .review, .feature, .request, .intro {
   padding: 3rem 0;
 }
 
@@ -316,7 +316,12 @@ button, input, select, textarea {
   border-radius: 6px;
   background-color: #7ebfd8;
   line-height: 1.44;
+  transition: 0.25s all ease-in-out;
 }
+a:hover .banner__main {
+  background-color: #ed6a1f;
+}
+
 .banner__title {
   margin: 0;
   color: #ffffff;
@@ -984,7 +989,7 @@ button, input, select, textarea {
 }
 .flow__movie {
   width: min(100%, 40rem);
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 0;
   padding: 0 0.75rem;
 }
 .flow__movie iframe {
@@ -1030,6 +1035,9 @@ button, input, select, textarea {
 /**
  * FAQ
  */
+.faq {
+  padding: 0 0 3rem;
+}
 .faq__item {
   margin-bottom: 1.5rem;
 }

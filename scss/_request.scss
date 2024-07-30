@@ -5,8 +5,7 @@
 .request {
   @extend %__section;
   position: relative;
-  background: url("./assets/bubbles.png") no-repeat 0 0 / cover scroll, linear-gradient(135deg, rgba(244, 179, 177, 1), rgba(193, 191, 223, 1));
-  background-blend-mode: color-dodge;
+  background: url("./assets/bg-summer.svg") no-repeat 75% 50% / cover scroll, linear-gradient(0deg, #a6d1e6, #7191ae, #34476e, #1c2a55);
 
   &::before, &::after {
     content: "";
@@ -38,6 +37,7 @@
 
   &__headingInner {
     @extend %__headingInner;
+    color: #ffffff;
   }
 
   &__inner {

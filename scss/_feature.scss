@@ -30,25 +30,9 @@
     margin: 1.5rem 0;
     padding-top: 1.5rem;
     border-radius: 12px;
-    background: url("./assets/bubbles.png") no-repeat 0 0 / cover scroll, linear-gradient(135deg, rgba(244, 179, 177, 1), rgba(193, 191, 223, 1));
+    background-color: #89bad7;
     background-blend-mode: color-dodge;
     line-height: 1.6;
-
-    @for $i from 1 through 3 {
-      &:nth-child(#{$i}) {
-        background-position: #{($i - 1) * 50%};
-        &::after {
-          content: "";
-          position: absolute;
-          top: -1.5rem;
-          left: 0;
-          right: 0;
-          width: 18.75rem;
-          height: 3rem;
-          background: url("./assets/num0#{$i}.svg") no-repeat 50% 50% / contain scroll;
-        }
-      }
-    }
   }
 
   &__subheading {

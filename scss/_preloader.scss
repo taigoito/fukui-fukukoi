@@ -28,16 +28,21 @@
     margin: 0.75rem auto;
   }
 
-  &__award {
+  &__awards {
     position: absolute;
     left: 0.75rem;
     right: 0.75rem;
     bottom: 0.75rem;
-    width: 6.75rem;
+    display: flex;
+    width: 20.25rem; // 6.75rem * 3
     margin: 0.75rem auto;
 
     @media (min-width: $breakpointSm) {
       left: auto;
     }
+  }
+
+  &__award {
+    flex: 0 0 6.75rem;
   }
 }

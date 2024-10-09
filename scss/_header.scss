@@ -55,14 +55,14 @@
     z-index: -1;
     width: 100%;
     aspect-ratio: 5 / 11;
-    background-image: url("./assets/main_mb-summer.jpg");
+    background-image: url("./assets/main_mb.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (min-width: $breakpointSm) {
       top: 0;
       aspect-ratio: 5 / 3;
-      background-image: url("./assets/main-summer.jpg");
+      background-image: url("./assets/main.jpg");
     }
   }
 

@@ -198,7 +198,7 @@ button, input, select, textarea {
   z-index: -1;
   width: 100%;
   aspect-ratio: 5/11;
-  background-image: url("./assets/main_mb-summer.jpg");
+  background-image: url("./assets/main_mb.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -206,7 +206,7 @@ button, input, select, textarea {
   .header__mainVisual {
     top: 0;
     aspect-ratio: 5/3;
-    background-image: url("./assets/main-summer.jpg");
+    background-image: url("./assets/main.jpg");
   }
 }
 .header__bubble {
@@ -291,7 +291,7 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   padding: 3rem 0 4.5rem;
-  background: linear-gradient(90deg, #1c2a55, #007bb7);
+  background: linear-gradient(90deg, #ee7a7a, #f19191);
 }
 .intro__bannerBg::before, .intro__bannerBg::after {
   content: "";
@@ -346,7 +346,8 @@ button, input, select, textarea {
  */
 .request {
   position: relative;
-  background: url("./assets/bg-summer.svg") no-repeat 75% 50%/cover scroll, linear-gradient(0deg, #a6d1e6, #7191ae, #34476e, #1c2a55);
+  background: url("./assets/bubbles.png") no-repeat 0 0/cover scroll, linear-gradient(135deg, rgb(244, 179, 177), rgb(193, 191, 223));
+  background-blend-mode: color-dodge;
 }
 .request::before, .request::after {
   content: "";
@@ -486,9 +487,48 @@ button, input, select, textarea {
   margin: 1.5rem 0;
   padding-top: 1.5rem;
   border-radius: 12px;
-  background-color: #89bad7;
+  background: url("./assets/bubbles.png") no-repeat 0 0/cover scroll, linear-gradient(135deg, rgb(244, 179, 177), rgb(193, 191, 223));
   background-blend-mode: color-dodge;
   line-height: 1.6;
+}
+.feature__content:nth-child(1) {
+  background-position: 0%;
+}
+.feature__content:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  right: 0;
+  width: 18.75rem;
+  height: 3rem;
+  background: url("./assets/num01.svg") no-repeat 50% 50%/contain scroll;
+}
+.feature__content:nth-child(2) {
+  background-position: 50%;
+}
+.feature__content:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  right: 0;
+  width: 18.75rem;
+  height: 3rem;
+  background: url("./assets/num02.svg") no-repeat 50% 50%/contain scroll;
+}
+.feature__content:nth-child(3) {
+  background-position: 100%;
+}
+.feature__content:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  right: 0;
+  width: 18.75rem;
+  height: 3rem;
+  background: url("./assets/num03.svg") no-repeat 50% 50%/contain scroll;
 }
 .feature__subheading {
   height: 4rem;
@@ -587,7 +627,7 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   padding: 3rem 0 4.5rem;
-  background: linear-gradient(90deg, #1c2a55, #007bb7);
+  background: linear-gradient(90deg, #ee7a7a, #f19191);
 }
 .feature__bannerBg::before, .feature__bannerBg::after {
   content: "";
@@ -811,7 +851,7 @@ button, input, select, textarea {
 .flow__inner {
   position: relative;
   padding: 3rem clamp(0.75rem, 2.5%, 1.5rem);
-  background: url("./assets/bubbles.png") no-repeat 0 0/cover scroll, #89bad7;
+  background: url("./assets/bubbles.png") no-repeat 0 0/cover scroll, linear-gradient(135deg, rgb(244, 179, 177), rgb(193, 191, 223));
   background-blend-mode: color-dodge;
 }
 .flow__inner::before, .flow__inner::after {
@@ -964,7 +1004,7 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   padding: 3rem 0 4.5rem;
-  background: linear-gradient(90deg, #1c2a55, #007bb7);
+  background: linear-gradient(90deg, #ee7a7a, #f19191);
 }
 .flow__bannerBg::before, .flow__bannerBg::after {
   content: "";
@@ -1083,7 +1123,7 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   padding: 3rem 0 4.5rem;
-  background: linear-gradient(90deg, #1c2a55, #007bb7);
+  background: linear-gradient(90deg, #ee7a7a, #f19191);
 }
 .faq__bannerBg::before, .faq__bannerBg::after {
   content: "";

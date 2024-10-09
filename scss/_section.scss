@@ -54,7 +54,7 @@
   display: flex;
   align-items: center;
   padding: 3rem 0 4.5rem;
-  background: linear-gradient(90deg, #1c2a55, #007bb7);
+  background: linear-gradient(90deg, #ee7a7a, lighten(#ee7a7a, 5%));
 
   &::before, &::after {
     content: "";

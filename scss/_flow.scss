@@ -16,8 +16,8 @@
   &__inner {
     position: relative;
     padding: 3rem clamp(0.75rem, 2.5%, 1.5rem);
-    background: url("./assets/bubbles.png") no-repeat 0 0 / cover scroll, linear-gradient(135deg, rgba(244, 179, 177, 1), rgba(193, 191, 223, 1));
-    background-blend-mode: color-dodge;
+    background: url("./assets/bg-winter_sm.png") no-repeat 50% 50% / cover scroll;
+    //background-blend-mode: color-dodge;
 
     &::before, &::after {
       content: "";

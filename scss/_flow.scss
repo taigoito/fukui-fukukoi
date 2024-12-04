@@ -16,8 +16,12 @@
   &__inner {
     position: relative;
     padding: 3rem clamp(0.75rem, 2.5%, 1.5rem);
-    background: url("./assets/bg-winter_sm.png") no-repeat 50% 50% / cover scroll;
+    background: url("./assets/bg-winter_mb.png") no-repeat 50% 50% / cover scroll;
     //background-blend-mode: color-dodge;
+
+    @media (min-width: $breakpointSm) {
+      background-image: url("./assets/bg-winter_sm.png");
+    }
 
     &::before, &::after {
       content: "";

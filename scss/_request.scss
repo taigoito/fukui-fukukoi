@@ -5,8 +5,12 @@
 .request {
   @extend %__section;
   position: relative;
-  background: url("./assets/bg-winter.png") no-repeat 50% 50% / cover scroll;
+  background: url("./assets/bg-winter_mb.png") no-repeat 50% 50% / cover scroll;
   //background-blend-mode: color-dodge;
+
+  @media (min-width: $breakpointSm) {
+    background-image: url("./assets/bg-winter.png");
+  }
 
   &::before, &::after {
     content: "";

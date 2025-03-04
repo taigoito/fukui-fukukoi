@@ -4,10 +4,18 @@
 
 .awards {
   display: flex;
+  flex-flow: row wrap;
   width: 20.25rem; // 6.75rem * 3
   margin: 0.75rem auto;
 
   &__award {
     flex: 0 0 6.75rem;
+  }
+
+  &__awardsDesc {
+    flex: 0 0 100%;
+    color: $black;
+    font-size: 0.85rem;
+    text-align: center;
   }
 }

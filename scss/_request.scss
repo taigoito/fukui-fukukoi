@@ -5,11 +5,12 @@
 .request {
   @extend %__section;
   position: relative;
-  background: url("./assets/bg-winter_mb.png") no-repeat 50% 50% / cover scroll;
-  //background-blend-mode: color-dodge;
+  background: url("./assets/bubbles.png") no-repeat 0 0 / cover scroll, linear-gradient(135deg, rgba(244, 179, 177, 1), rgba(193, 191, 223, 1));
+  background-blend-mode: color-dodge;
+  //background: url("./assets/bg-winter_mb.png") no-repeat 50% 50% / cover scroll;
 
   @media (min-width: $breakpointSm) {
-    background-image: url("./assets/bg-winter.png");
+    //background-image: url("./assets/bg-winter.png");
   }
 
   &::before, &::after {
